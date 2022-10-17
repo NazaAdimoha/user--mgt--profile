@@ -6,7 +6,7 @@ const NavBar = () => {
     const { activeMenu, setActiveMenu } = useStateContext()
   return (
     <div>
-        
+        hello
     </div>
   )
 }

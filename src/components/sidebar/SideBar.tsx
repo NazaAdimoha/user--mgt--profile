@@ -6,7 +6,7 @@ import { links } from "../../data/SideBarDummyData";
 import { useStateContext } from "../../contexts/ContextProvider";
 
 const SideBar = () => {
-  const activeMenu = useStateContext();
+  const {activeMenu} = useStateContext();
 
   const activeLink =
     "flex items-center pl-4 pt-3 pb-3 rounded-lg text-white text-md gap-5 m-2";

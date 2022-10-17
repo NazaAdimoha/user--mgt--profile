@@ -4,7 +4,7 @@ interface StateContextProps {
     children: React.ReactNode,
 }
 
-export const StateContext = createContext({});
+export const StateContext = createContext<any | undefined>(undefined);
 
 const initialState = {
     userProfile: false,
@@ -16,8 +16,8 @@ export const StateProvider = ({ children }: StateContextProps) => {
     const [activeMenu, setActiveMenu] = useState(true);
     return (
         <StateContext.Provider value={{
-            activeMenu: activeMenu,
-            setActiveMenu: setActiveMenu
+            activeMenu,
+            setActiveMenu
         }}>
             {children}
         </StateContext.Provider>    
